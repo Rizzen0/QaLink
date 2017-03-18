@@ -2,6 +2,10 @@ import React from 'react';
 import QuestionRate from './QuestionRate.jsx';
 
 export default class PatientPage extends React.Component {
+  constructor() {
+    super();
+  }
+
   render() {
     return (
       <div>
