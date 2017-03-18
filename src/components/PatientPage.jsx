@@ -1,6 +1,8 @@
 import React from 'react';
 import QuestionRate from './QuestionRate.jsx';
-import HammerCard from './HammerCard.jsx';
+import { QuestionCard } from './QuestionCard.jsx';
+
+import '../styles/Rating.scss'
 
 export default class PatientPage extends React.Component {
   constructor() {
@@ -11,7 +13,7 @@ export default class PatientPage extends React.Component {
     return (
       <div>
         <h1>PatientPage</h1>
-        <HammerCard/>
+        <QuestionCard/>
         <br/>
         <QuestionRate/>
       </div>

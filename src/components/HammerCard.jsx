@@ -2,6 +2,8 @@ import React from 'react'
 import Hammer from 'react-hammerjs'
 import { Card } from 'semantic-ui-react'
 
+Hammer
+
 const items = [{
     header: 'Project Report - April',
     description: 'Leverage agile frameworks to provide a robust synopsis for high level overviews.',

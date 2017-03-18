@@ -1,4 +1,4 @@
-var express = require('require');
+var express = require('express');
 var router = express.Router();
 
 router.use(function(req, res, next) {
@@ -19,15 +19,18 @@ router.use(function(req, res, next) {
   next();
 });
 
-router.get('/', function (req, res, next) {
-    var session = req.session;
-
+router.get('/', function (req, res) {
     res.send('<p>QA Link API.</p>');
 });
 
-var user = require('./question.js');
+router.get('/questions', function (req, res, next) {
+    var questionObject = require('./questions.json');
+    res.json(questionObject);
+});
 
-router.route('/question')
-    .get(question.apiGET)
+router.get('/patients', function (req, res, next) {
+    var patientObject = require('./patients.json');
+    res.json(patientObject);
+});
 
 module.exports = router;
