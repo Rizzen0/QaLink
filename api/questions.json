@@ -1,5 +1,5 @@
 {
-  "startq": "Depuis votre dernière visite sur QAlink, avez-vous noté une modification dans vos acitivtés de la vie quotidienne, votre sommeil, votre alimentation ?",
+  "start": "Depuis votre dernière visite sur QAlink, avez-vous noté une modification dans vos acitivtés de la vie quotidienne, votre sommeil, votre alimentation ?",
   "startadependences": true,
 
   "physique": {
