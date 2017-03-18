@@ -13,7 +13,6 @@ export default class DoctorPatientView extends React.Component {
         name: 'John Smith',
         illness: 'Leucemie',
         score: 23,
-        
         chartData: {
           labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
           datasets: [
@@ -46,15 +45,7 @@ export default class DoctorPatientView extends React.Component {
     return (
       <Container>
         <Header>{this.state.patient.name}</Header>
-        <Grid columns={2}>
-          <Grid.Column>
-            
-          </Grid.Column>
-          <Grid.Column>
-            <RC2 type='radar' data={this.state.patient.chartData} width={400} height={200} />
-            <RC2 type='line' data={this.state.patient.chartData} width={400} height={200} />
-          </Grid.Column>
-        </Grid>
+        <RC2 type='radar' data={this.state.patient.chartData} />
       </Container>
     )
   }
