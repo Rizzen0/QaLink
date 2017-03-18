@@ -4,7 +4,7 @@ var path = require('path')
 
 module.exports = {
   context: path.join(__dirname, 'src'),
-  entry: './js/client.jsx',
+  entry: './Client.jsx',
   module: {
     loaders: [
       {
@@ -14,6 +14,11 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
+      },
+      {
+        test: /.scss$/,
+        loader: ['style-loader', 'css-loader', 'sass-loader'],
+        exclude: /node_modules/
       }
     ]
   },
@@ -23,11 +28,5 @@ module.exports = {
     filename: 'bundle.min.js'
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({mangle: false, sourcemap: false})
   ]
 };
