@@ -1,7 +1,8 @@
 import React from 'react';
-import { Rating } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
 
 import '../styles/Rating.scss'
+import '../styles/RatingButton.scss'
 
 export default class QuestionRate extends React.Component {
   constructor(props) {
@@ -17,17 +18,24 @@ export default class QuestionRate extends React.Component {
       else {
         return ('Beaucoup');
       }
-    }
+    };
+
+    this.getAnswer = function(rating){
+        console.log('button pressed for ' + rating);
+    };
+
     this.state = { rating: 2 };
   }
 
   render() {
-    const { rating } = this.state
+    const { rating } = this.state;
 
     return (
       <div>
-        <div>Valeur:  {this.displayHumor(rating)}</div>
+        <div className="RatingValue">Valeur:  {this.displayHumor(rating)}</div>
         <input type='range' min={1} max={3} value={rating} onChange={this.handleChange} />
+        <br/>
+        <Button color="blue" circular={true} compact={true} onClick={this.getAnswer(rating)} primary>Continuer</Button>
       </div>
     );
   }
