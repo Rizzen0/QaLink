@@ -2,6 +2,8 @@ import React from 'react';
 import QuestionRate from './QuestionRate.jsx';
 import { QuestionCard } from './QuestionCard.jsx';
 
+import '../styles/Rating.scss'
+
 export default class PatientPage extends React.Component {
   constructor() {
     super();
