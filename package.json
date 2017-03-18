@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/TheRizzen/QaLink#readme",
   "dependencies": {
+    "axios": "^0.15.3",
     "chart.js": "^1.1.1",
     "express": "^4.15.2",
     "node-sass": "^4.5.0",
