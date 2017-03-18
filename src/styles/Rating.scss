@@ -1,6 +1,13 @@
+.RatingValue{
+  text-align: center;
+}
+
 input[type=range] {
   -webkit-appearance: none;
   width: 50%;
+  height:40px;
+  position:relative;
+  left:30%;
   margin: 13.8px 0;
 }
 input[type=range]:focus {
