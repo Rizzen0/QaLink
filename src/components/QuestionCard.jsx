@@ -1,6 +1,5 @@
 import React from 'react'
 import HamComp from 'react-hammerjs'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 import { Card } from 'semantic-ui-react'
 
