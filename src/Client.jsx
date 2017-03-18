@@ -9,10 +9,10 @@ import DoctorPage from './components/DoctorPage.jsx'
 const app = document.getElementById('app');
 
 ReactDOM.render(
-  <Router history={hashHistory}>
-    <Route path="/" component={App}>
-      <IndexRoute component={PatientPage}/>
-      <Route path="/DoctorPage" component={DoctorPage}/>
-    </Route>
-  </Router>
-  , app);
+                <Router history={hashHistory}>
+                  <Route path="/" component={App}>
+                    <IndexRoute component={PatientPage}/>
+                    <Route path="/DoctorPage" component={DoctorPage}/>
+                  </Route>
+                </Router>
+                , app);
