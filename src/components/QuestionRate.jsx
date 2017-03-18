@@ -32,9 +32,10 @@ export default class QuestionRate extends React.Component {
 
     return (
       <div>
-        <div className="RatingValue">Valeur:  {this.displayHumor(rating)}</div>
-        <input type='range' min={1} max={3} value={rating} onChange={this.handleChange} />
+        <div className="RatingValue">{this.displayHumor(rating)}</div>
         <br/>
+        <input type='range' min={1} max={3} value={rating} onChange={this.handleChange} />
+        <br/><br/>
         <Button color="blue" circular={true} compact={true} onClick={this.getAnswer(rating)} primary>Continuer</Button>
       </div>
     );
