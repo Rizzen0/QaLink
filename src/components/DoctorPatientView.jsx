@@ -365,14 +365,8 @@ export default class DoctorPatientView extends React.Component {
               <Dropdown placeholder='Sélection de le date de fin' fluid selection options={dateDropdown} onChange={this.handleDateEndChange} />
             </Grid.Column>
           </Grid.Row>
-          <Grid.Row>
-            <Grid.Column>
-            </Grid.Column>
-            <Grid.Column>
-              <RC2 type='radar' data={this.state.chartData} />
-            </Grid.Column>
-          </Grid.Row>
         </Grid>
+        <RC2 type='radar' data={this.state.chartData} height='175%' />
         <Button href='#/DoctorPage'>Retour</Button>
       </Container>
       </div>
