@@ -7,17 +7,39 @@ import { Card } from 'semantic-ui-react'
 export class QuestionCard extends React.Component {
   constructor() {
     super();
+
+    this.state = {
+      index: 0
+    };
+    this.handleSwipe = function (e) {
+      if (e.direction == Hammer.DIRECTION_LEFT) {
+        this.setState({index: 1});
+        Card.addClass('animated bouceOutLeft');
+      }
+      else if (e.direction == Hammer.DIRECTION_RIGHT) {
+        Card.addClass('animated bouceOutRight');
+      }
+    }
   }
 
   render() {
-    return (
-            <div className="questionCard">
-              <HamComp onSwipe={this.props.handleSwipe.bind(this.props.me)}>
-                <Card
-                  header={this.props.question}
-                />
-              </HamComp>
-            </div>
-            )
+    if (this.state.index == 1) {
+      return (
+        <div>lol</div>
+      )
+    }
+    else {
+      return (
+        <div>
+          <HamComp onSwipe={this.handleSwipe.bind(this)}>
+            <Card
+              header='Elliot Baker'
+              meta='Friend'
+              description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
+            />
+          </HamComp>
+        </div>
+      )
+    }
   }
 }

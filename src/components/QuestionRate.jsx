@@ -7,7 +7,9 @@ import '../styles/RatingButton.scss'
 export default class QuestionRate extends React.Component {
   constructor(props) {
     super(props);
+
     this.handleChange = (e) => this.setState({ rating: e.target.value });
+
     this.displayHumor = function(humor) {
       if (humor == 1) {
         return ('Un peu');
@@ -34,9 +36,9 @@ export default class QuestionRate extends React.Component {
       <div>
         <div className="RatingValue">{this.displayHumor(rating)}</div>
         <br/>
-        <input type='range' min={1} max={3} value={rating} onChange={this.handleChange} />
+        <input type='range' min={1} max={3} value={rating} onChange={this.handleChange}/>
         <br/><br/>
-        <Button color="blue" circular={true} compact={true} onClick={this.getAnswer(rating)} primary>Continuer</Button>
+        <Button color="blue" circular={true} onClick={this.getAnswer} primary>Continuer</Button>
       </div>
     );
   }
