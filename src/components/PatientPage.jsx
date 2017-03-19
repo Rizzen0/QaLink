@@ -4,7 +4,7 @@ import { QuestionCard } from './QuestionCard.jsx';
 import Axios from 'axios';
 import { adviceMessage } from './adviceMessage.jsx';
 import QAHeader from './QAHeader.jsx';
-import { Message } from 'semantic-ui-react';
+import { Message, Label } from 'semantic-ui-react';
 import '../styles/PatientPage.scss'
 import '../styles/Rating.scss'
 
@@ -109,6 +109,8 @@ export default class PatientPage extends React.Component {
                 </Message.Header>
               </Message>
               <br/>
+              <Label className="oui" size="massive" color='red'>OUI</Label>
+              <Label className="non" size="massive" color='green'>NON</Label>
               <QuestionCard me={this} handleSwipe={this.handleSwipe} question={this.state.question} animation={this.state.animation} image={this.state.image}/>
               <br/>
               <QuestionRate/>
