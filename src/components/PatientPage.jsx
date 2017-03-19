@@ -2,8 +2,9 @@ import React from 'react';
 import QuestionRate from './QuestionRate.jsx';
 import { QuestionCard } from './QuestionCard.jsx';
 import Axios from 'axios';
-import { adviceMessage } from './adviceMessage.jsx'
-import QAHeader from './QAHeader.jsx'
+import { adviceMessage } from './adviceMessage.jsx';
+import QAHeader from './QAHeader.jsx';
+import { Message } from 'semantic-ui-react';
 import '../styles/PatientPage.scss'
 import '../styles/Rating.scss'
 
@@ -84,7 +85,13 @@ export default class PatientPage extends React.Component {
     return (
             <div>
               <QAHeader/>
-              <h1>PatientPage</h1>
+              <br/>
+              <Message info size="massive">
+                <Message.Header className="page">
+                  Bonjour, Marc
+                </Message.Header>
+              </Message>
+              <br/>
               <QuestionCard me={this} handleSwipe={this.handleSwipe} question={this.state.question} animation={this.state.animation}/>
               <br/>
               <QuestionRate/>
