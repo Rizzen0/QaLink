@@ -1,52 +1,56 @@
 {
-  "start": "Depuis votre dernière visite sur QAlink, avez-vous noté une modification dans vos activités de la vie quotidienne, votre sommeil, votre alimentation ?",
+  "array" : [
+    "Depuis votre dernière visite sur QAlink, avez-vous noté une modification dans vos activités de la vie quotidienne, votre sommeil, votre alimentation ?",
 
-  "physique": {
-    "start": "Ressentez-vous une gène d'un point de vue physique ?",
-    "q1": "Je me sens plus faible ou fatigué.",
-    "q2": "J'ai des douleurs.",
-    "q3": "J'ai le souffle court.",
-    "q4": "J'ai besoin de repos.",
-    "q5": "Je suis allongé plus de la moitié de la journée."
-  },
+    {
+      "start": "Ressentez-vous une gène d'un point de vue physique ?",
+      "questions": [
+        "Je me sens plus faible ou fatigué.",
+        "J'ai des douleurs.",
+        "J'ai le souffle court.",
+        "J'ai besoin de repos.",
+        "Je suis allongé plus de la moitié de la journée."
+      ]
+    },
 
-  "alimentation": {
-    "start": "Ressentez-vous une gène au niveau de votre alimentaton ?",
-    "q1": "J'ai une perte d'appétit.",
-    "q2": "J'ai une perte de goût.",
-    "bonus": {
-      "q3": "J'ai des nausées.",
-      "adependecies": true,
-      "q4": "J'ai vomi."
-    }
-  },
+    {
+      "start": "Ressentez-vous une gène au niveau de votre alimentaton ?",
+      "questions": [
+        "J'ai une perte d'appétit.",
+        "J'ai une perte de goût.",
+        "J'ai des nausées."
+      ],
+      "bonus": "J'ai vomi."
+    },
 
-  "soins_corporels": {
-    "start": "Ressentez-vous une gène au niveau de vos soins corporels ?",
-    "q1": "J'ai besoin d'aide pour m'habiller.",
-    "q2": "J'ai besoin d'aide pour faire ma toilette.",
-    "bonus": {
-      "q3": "J'ai des diarrhées.",
-      "adependecies": false,
-      "q4": "Je suis constipé."
-    }
-  },
+    {
+      "start": "Ressentez-vous une gène au niveau de vos soins corporels ?",
+      "questions": [
+        "J'ai besoin d'aide pour m'habiller.",
+        "J'ai besoin d'aide pour faire ma toilette.",
+        "J'ai des diarrhées."
+      ],
+      "bonus": "Je suis constipé."
+    },
 
-  "mental_et_social": {
-    "start": "Ressentez-vous une gène mental et/ou social ?",
-    "q1": "Je me sens déprimé.",
-    "q2": "J'ai eu des difficultés pour dormir.",
-    "q3": "J'ai des difficultés à voir ma famille ou mes amis."
-  },
+    {
+      "start": "Ressentez-vous une gène mental et/ou social ?",
+      "questions": [
+        "Je me sens déprimé.",
+        "J'ai eu des difficultés pour dormir.",
+        "J'ai des difficultés à voir ma famille ou mes amis."
+      ]
+    },
 
-  "activités_de_la_vie_quotidienne": {
-    "start": "Ressentez-vous une gène au cours de vos activités quotidiennes ?",
-    "q1": "J'ai du mal à porter mes courses.",
-    "q2": "J'ai du mal à faire de longues promenades.",
-    "q3": "J'ai du mal à faire un travail physique d'au moins 2h."
-  },
+    {
+      "start": "Ressentez-vous une gène au cours de vos activités quotidiennes ?",
+      "questions" : [
+        "J'ai du mal à porter mes courses.",
+        "J'ai du mal à faire de longues promenades.",
+        "J'ai du mal à faire un travail physique d'au moins 2h."
+      ]
+    },
 
-  "suite": "Avez-vous d'autres symptômes ?",
-  "fin": "Comment évaluerez-vous l'ensemble de votre qualité de vie au cours de la semaine passée.",
-  "startadependences": true
+    "Comment évaluerez-vous l'ensemble de votre qualité de vie au cours de la semaine passée."
+  ]
 }
