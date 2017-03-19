@@ -10,7 +10,7 @@ export default class DoctorPage extends React.Component {
       patients: [
         {
           img: 'http://react.semantic-ui.com/assets/images/avatar/large/daniel.jpg',
-          name: 'John Smith',
+          name: 'Marc Smith',
           illness: 'Leucemie',
           score: 23,
           id: 1
@@ -24,21 +24,21 @@ export default class DoctorPage extends React.Component {
         },
         {
           img: 'http://react.semantic-ui.com/assets/images/avatar/large/daniel.jpg',
-          name: 'John Smith',
+          name: 'Marc Doe',
           illness: 'Leucemie',
           score: 32,
           id: 3
         },
         {
           img: 'http://react.semantic-ui.com/assets/images/avatar/large/daniel.jpg',
-          name: 'John Smith',
+          name: 'Marc Migomu',
           illness: 'Leucemie',
           score: 12,
           id: 4
         },
         {
           img: 'http://react.semantic-ui.com/assets/images/avatar/large/daniel.jpg',
-          name: 'John Smith',
+          name: 'Marc Smith',
           illness: 'Leucemie',
           score: 58,
           id: 5
@@ -64,12 +64,14 @@ export default class DoctorPage extends React.Component {
       }
     );
     return (
+      <div style={{backgroundColor: 'rgba(77, 255, 232, 0.03)'}}>
       <Container>
         <h1>DoctorPage</h1>
         <Card.Group itemsPerRow={4}>
             {listGrids}
         </Card.Group>
       </Container>
+      </div>
     )
   }
 }

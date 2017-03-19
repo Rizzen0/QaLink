@@ -1,7 +1,7 @@
 import React from 'react';
 
 import RC2 from 'react-chartjs2';
-import { Grid, Container, Header, Dropdown } from 'semantic-ui-react'
+import { Grid, Container, Header, Dropdown, Image, Button } from 'semantic-ui-react'
 
 
 export default class DoctorPatientView extends React.Component {
@@ -351,8 +351,11 @@ export default class DoctorPatientView extends React.Component {
       dateDropdown.push({text: i, value: i})
     }
     return (
+      <div style={{backgroundColor: 'rgba(77, 255, 232, 0.03)'}}>
       <Container>
-        <Header>{this.state.patient.firstName} {this.state.patient.lastName}</Header>
+        <Header>
+          <Image src='Pack_Icones/personna.svg' />
+          {this.state.patient.firstName} {this.state.patient.lastName}</Header>
         <Grid columns={2} divided>
           <Grid.Row>
             <Grid.Column>
@@ -370,7 +373,9 @@ export default class DoctorPatientView extends React.Component {
             </Grid.Column>
           </Grid.Row>
         </Grid>
+        <Button href='#/DoctorPage'>Retour</Button>
       </Container>
+      </div>
     )
   }
 }
