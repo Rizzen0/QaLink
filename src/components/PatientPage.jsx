@@ -23,7 +23,6 @@ export default class PatientPage extends React.Component {
         this.setState({resp: true});
       }
       if (this.state.current == 0) {
-        this.setState({question: this.state.data.start});
         this.setState({current: this.state.current++});
       }
       if (this.state.current == 1) {
@@ -35,6 +34,7 @@ export default class PatientPage extends React.Component {
     Axios.get('http://localhost:3000/api/questions')
       .then(res => {
         this.setState({data: res.data});
+        this.setState({question: this.state.data.start});
       });
   }
 
