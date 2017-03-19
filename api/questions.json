@@ -2,73 +2,48 @@
   "start": "Depuis votre dernière visite sur QAlink, avez-vous noté une modification dans vos activités de la vie quotidienne, votre sommeil, votre alimentation ?",
 
   "physique": {
-    "root": {
     "start": "Ressentez-vous une gène d'un point de vue physique ?",
-    "adependencies": true,
-    "continue": {
-      "q1": "Je me sens plus faible ou fatigué.",
-      "q2": "J'ai des douleurs.",
-      "q3": "J'ai le souffle court.",
-      "q4": "J'ai besoin de repos.",
-      "q5": "Je suis allongé plus de la moitié de la journée."
-    }
-   }
+    "q1": "Je me sens plus faible ou fatigué.",
+    "q2": "J'ai des douleurs.",
+    "q3": "J'ai le souffle court.",
+    "q4": "J'ai besoin de repos.",
+    "q5": "Je suis allongé plus de la moitié de la journée."
   },
 
   "alimentation": {
-    "root": {
     "start": "Ressentez-vous une gène au niveau de votre alimentaton ?",
-    "adependencies": true,
-    "continue": {
-      "q1": "J'ai une perte d'appétit.",
-      "q2": "J'ai une perte de goût."
-    },
+    "q1": "J'ai une perte d'appétit.",
+    "q2": "J'ai une perte de goût.",
     "bonus": {
       "q3": "J'ai des nausées.",
       "adependecies": true,
       "q4": "J'ai vomi."
     }
-   }
   },
 
-  "soins corporels": {
-    "root": {
+  "soins_corporels": {
     "start": "Ressentez-vous une gène au niveau de vos soins corporels ?",
-    "adependencies": true,
-    "continue": {
-      "q1": "J'ai besoin d'aide pour m'habiller.",
-      "q2": "J'ai besoin d'aide pour faire ma toilette."
-    },
+    "q1": "J'ai besoin d'aide pour m'habiller.",
+    "q2": "J'ai besoin d'aide pour faire ma toilette.",
     "bonus": {
       "q3": "J'ai des diarrhées.",
       "adependecies": false,
       "q4": "Je suis constipé."
     }
-   }
   },
 
-  "mental et social": {
-    "root": {
+  "mental_et_social": {
     "start": "Ressentez-vous une gène mental et/ou social ?",
-    "adependencies": true,
-    "continue": {
-      "q1": "Je me sens déprimé.",
-      "q2": "J'ai eu des difficultés pour dormir.",
-      "q3": "J'ai des difficultés à voir ma famille ou mes amis."
-    }
-   }
+    "q1": "Je me sens déprimé.",
+    "q2": "J'ai eu des difficultés pour dormir.",
+    "q3": "J'ai des difficultés à voir ma famille ou mes amis."
   },
 
-  "activités de la vie quotidienne": {
-    "root": {
+  "activités_de_la_vie_quotidienne": {
     "start": "Ressentez-vous une gène au cours de vos activités quotidiennes ?",
-    "adependencies": true,
-    "continue": {
-      "q1": "J'ai du mal à porter mes courses.",
-      "q2": "J'ai du mal à faire de longues promenades.",
-      "q3": "J'ai du mal à faire un travail physique d'au moins 2h."
-    }
-   }
+    "q1": "J'ai du mal à porter mes courses.",
+    "q2": "J'ai du mal à faire de longues promenades.",
+    "q3": "J'ai du mal à faire un travail physique d'au moins 2h."
   },
 
   "suite": "Avez-vous d'autres symptômes ?",
