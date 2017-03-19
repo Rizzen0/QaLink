@@ -1,9 +1,9 @@
 {
-  "start": "Depuis votre dernière visite sur QAlink, avez-vous noté une modification dans vos acitivtés de la vie quotidienne, votre sommeil, votre alimentation ?",
+  "start": "Depuis votre dernière visite sur QAlink, avez-vous noté une modification dans vos activités de la vie quotidienne, votre sommeil, votre alimentation ?",
 
   "physique": {
     "root": {
-    "start": "Ressentz-vous une gène d'un point de vue physique ?",
+    "start": "Ressentez-vous une gène d'un point de vue physique ?",
     "adependencies": true,
     "continue": {
       "q1": "Je me sens plus faible ou fatigué.",
@@ -17,7 +17,7 @@
 
   "alimentation": {
     "root": {
-    "start": "Ressentz-vous une gène au niveau de votre alimentaton ?",
+    "start": "Ressentez-vous une gène au niveau de votre alimentaton ?",
     "adependencies": true,
     "continue": {
       "q1": "J'ai une perte d'appétit.",
@@ -33,7 +33,7 @@
 
   "soins corporels": {
     "root": {
-    "start": "Ressentz-vous une gène au niveau de vos soins corporels ?",
+    "start": "Ressentez-vous une gène au niveau de vos soins corporels ?",
     "adependencies": true,
     "continue": {
       "q1": "J'ai besoin d'aide pour m'habiller.",
@@ -49,7 +49,7 @@
 
   "mental et social": {
     "root": {
-    "start": "Ressentz-vous une gène mental et/ou social ?",
+    "start": "Ressentez-vous une gène mental et/ou social ?",
     "adependencies": true,
     "continue": {
       "q1": "Je me sens déprimé.",
@@ -61,7 +61,7 @@
 
   "activités de la vie quotidienne": {
     "root": {
-    "start": "Ressentz-vous une gène au cours de vos activités quotidiennes ?",
+    "start": "Ressentez-vous une gène au cours de vos activités quotidiennes ?",
     "adependencies": true,
     "continue": {
       "q1": "J'ai du mal à porter mes courses.",
