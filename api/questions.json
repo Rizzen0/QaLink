@@ -1,6 +1,5 @@
 {
   "start": "Depuis votre dernière visite sur QAlink, avez-vous noté une modification dans vos acitivtés de la vie quotidienne, votre sommeil, votre alimentation ?",
-  "startadependences": true,
 
   "physique": {
     "root": {
@@ -21,7 +20,7 @@
     "start": "Ressentz-vous une gène au niveau de votre alimentaton ?",
     "adependencies": true,
     "continue": {
-      "q1": "J'ai une perte d'apétit.",
+      "q1": "J'ai une perte d'appétit.",
       "q2": "J'ai une perte de goût."
     },
     "bonus": {
@@ -57,6 +56,7 @@
       "q2": "J'ai eu des difficultés pour dormir.",
       "q3": "J'ai des difficultés à voir ma famille ou mes amis."
     }
+   }
   },
 
   "activités de la vie quotidienne": {
@@ -73,5 +73,6 @@
 
   "suite": "Avez-vous d'autres symptômes ?",
   "fin": "Comment évaluerez-vous l'ensemble de votre qualité de vie au cours de la semaine passée."
- }
+ },
+  "startadependences": true
 }
