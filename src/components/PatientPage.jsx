@@ -2,8 +2,10 @@ import React from 'react';
 import QuestionRate from './QuestionRate.jsx';
 import { QuestionCard } from './QuestionCard.jsx';
 import Axios from 'axios';
+import { adviceMessage } from './adviceMessage.jsx';
+import QAHeader from './QAHeader.jsx';
+import { Message } from 'semantic-ui-react';
 import '../styles/PatientPage.scss'
-
 import '../styles/Rating.scss'
 
 export default class PatientPage extends React.Component {
@@ -16,7 +18,9 @@ export default class PatientPage extends React.Component {
       data: {},
       index: 0,
       index2: 0,
-      animation: ''
+      animation: '',
+      headmessage: "ATTENTION alimentation",
+      mainmessage: "PAS de riz, de yaourt"
     };
 
     this.sleep = function sleep(milliseconds) {
@@ -30,20 +34,18 @@ export default class PatientPage extends React.Component {
 
     this.handleSwipe = function (e) {
       if (e.direction == Hammer.DIRECTION_LEFT) {
-        document.getElementsByClassName('header')[0].innerHTML = ''
         this.setState({resp: false});
         this.setState({animation: 'animated bounceOutLeft'});
         setTimeout(() => {
           this.setState({animation: 'animated bounceInRight'});
-        }, 1000);
+        }, 500);
       }
       else if (e.direction == Hammer.DIRECTION_RIGHT) {
-        document.getElementsByClassName('header')[0].innerHTML = 'what';
         this.setState({resp: true});
         this.setState({animation: 'animated bounceOutRight'});
         setTimeout(() => {
           this.setState({animation: 'animated bounceInLeft'});
-        }, 1000);
+        }, 500);
       }
       if (this.state.index == 0 && this.state.resp)
         this.setState({index: 1});
@@ -80,10 +82,19 @@ export default class PatientPage extends React.Component {
   render() {
     return (
             <div>
-              <h1>PatientPage</h1>
+              <QAHeader/>
+              <br/>
+              <Message info size="massive">
+                <Message.Header className="page">
+                  Bonjour, Marc
+                </Message.Header>
+              </Message>
+              <br/>
               <QuestionCard me={this} handleSwipe={this.handleSwipe} question={this.state.question} animation={this.state.animation}/>
               <br/>
               <QuestionRate/>
+              <br/>
+              <adviceMessage head={this.state.headmessage} message={this.state.mainmessage}/>
             </div>
             )
   }

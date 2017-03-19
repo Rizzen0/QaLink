@@ -1,4 +1,5 @@
 import React from 'react';
+import QAHeader from './QAHeader.jsx'
 
 import { Container, Grid, Image, Header, Card } from 'semantic-ui-react'
 
@@ -65,8 +66,8 @@ export default class DoctorPage extends React.Component {
     );
     return (
       <div style={{backgroundColor: 'rgba(77, 255, 232, 0.03)'}}>
-      <Container>
-        <h1>DoctorPage</h1>
+        <QAHeader/>
+        <Container>
         <Card.Group itemsPerRow={4}>
             {listGrids}
         </Card.Group>

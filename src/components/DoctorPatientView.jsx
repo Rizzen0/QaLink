@@ -1,5 +1,6 @@
 import React from 'react';
 
+import QAHeader from './QAHeader.jsx'
 import RC2 from 'react-chartjs2';
 import { Grid, Container, Header, Dropdown, Image, Button } from 'semantic-ui-react'
 
@@ -352,6 +353,7 @@ export default class DoctorPatientView extends React.Component {
     }
     return (
       <div style={{backgroundColor: 'rgba(77, 255, 232, 0.03)'}}>
+      <QAHeader/>
       <Container>
         <Header>
           <Image src='Pack_Icones/personna.svg' />
