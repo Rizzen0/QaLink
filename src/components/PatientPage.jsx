@@ -34,7 +34,6 @@ export default class PatientPage extends React.Component {
 
     this.handleSwipe = function (e) {
       if (e.direction == Hammer.DIRECTION_LEFT) {
-        document.getElementsByClassName('header')[0].innerHTML = ''
         this.setState({resp: false});
         this.setState({animation: 'animated bounceOutLeft'});
         setTimeout(() => {
@@ -42,7 +41,6 @@ export default class PatientPage extends React.Component {
         }, 500);
       }
       else if (e.direction == Hammer.DIRECTION_RIGHT) {
-        document.getElementsByClassName('header')[0].innerHTML = 'what';
         this.setState({resp: true});
         this.setState({animation: 'animated bounceOutRight'});
         setTimeout(() => {
