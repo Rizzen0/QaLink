@@ -19,6 +19,7 @@ export default class PatientPage extends React.Component {
       index: 0,
       index2: 0,
       animation: '',
+      image: '/Pack_Icones/croix soin.png',
       headmessage: "ATTENTION alimentation",
       mainmessage: "PAS de riz, de yaourt"
     };
@@ -47,8 +48,10 @@ export default class PatientPage extends React.Component {
           this.setState({animation: 'animated bounceInLeft'});
         }, 500);
       }
-      if (this.state.index == 0 && this.state.resp)
+      if (this.state.index == 0 && this.state.resp) {
         this.setState({index: 1});
+        this.setState({image: '/Pack_Icones/physique.png'});
+      }
       else if (this.state.index == 0 && !this.state.resp)
         this.setState({index: 6});
       console.log(this.state.index);
@@ -59,11 +62,27 @@ export default class PatientPage extends React.Component {
         this.setState({question: this.state.data[this.state.index].questions[this.state.index2], index2: this.state.index2 + 1});
         if (this.state.index2 == this.state.data[this.state.index].questions.length) {
           this.setState({index2: 0, index: this.state.index + 1, started: false});
+          if (this.state.index == 2)
+            this.setState({image: '/Pack_Icones/alimentation.png'});
+          else if (this.state.index == 3)
+            this.setState({image: '/Pack_Icones/soin du corps.png'});
+          else if (this.state.index == 4)
+            this.setState({image: '/Pack_Icones/Social et mentale.png'});
+          else if (this.state.index == 5)
+            this.setState({image: '/Pack_Icones/activité quotidienne.png'});
         }
       }
       else if (this.state.index != 6 && this.state.index2 == 0 && !this.state.resp) {
         this.setState({index: this.state.index + 1});
         this.setState({question: this.state.data[this.state.index].start});
+        if (this.state.index == 2)
+          this.setState({image: '/Pack_Icones/alimentation.png'});
+        else if (this.state.index == 3)
+          this.setState({image: '/Pack_Icones/soin du corps.png'});
+        else if (this.state.index == 4)
+          this.setState({image: '/Pack_Icones/Social et mentale.png'});
+        else if (this.state.index == 5)
+          this.setState({image: '/Pack_Icones/activité quotidienne.png'});
       }
       else if (this.state.index == 6)
         this.setState({question: this.state.data[this.state.index]});
@@ -90,7 +109,7 @@ export default class PatientPage extends React.Component {
                 </Message.Header>
               </Message>
               <br/>
-              <QuestionCard me={this} handleSwipe={this.handleSwipe} question={this.state.question} animation={this.state.animation}/>
+              <QuestionCard me={this} handleSwipe={this.handleSwipe} question={this.state.question} animation={this.state.animation} image={this.state.image}/>
               <br/>
               <QuestionRate/>
               <br/>

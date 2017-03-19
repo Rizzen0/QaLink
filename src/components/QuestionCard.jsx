@@ -25,7 +25,7 @@ export class QuestionCard extends React.Component {
             <div id="questionCard" className={this.props.animation}>
               <HamComp onSwipe={this.props.handleSwipe.bind(this.props.me)}>
                 <Card
-                  header={this.props.question}
+                  header={this.props.question} image={this.props.image}
                 />
               </HamComp>
             </div>
