@@ -5,7 +5,6 @@ import Axios from 'axios';
 import { adviceMessage } from './adviceMessage.jsx'
 import QAHeader from './QAHeader.jsx'
 import '../styles/PatientPage.scss'
-
 import '../styles/Rating.scss'
 
 export default class PatientPage extends React.Component {

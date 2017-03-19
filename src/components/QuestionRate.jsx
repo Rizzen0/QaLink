@@ -38,7 +38,6 @@ export default class QuestionRate extends React.Component {
         <br/>
         <input type='range' min={1} max={3} value={rating} onChange={this.handleChange}/>
         <br/><br/>
-        <Button color="blue" circular={true} onClick={() => this.getAnswer(rating)} primary>Continuer</Button>
       </div>
     );
   }
