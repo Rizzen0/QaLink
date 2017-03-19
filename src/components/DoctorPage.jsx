@@ -66,8 +66,8 @@ export default class DoctorPage extends React.Component {
     );
     return (
       <div style={{backgroundColor: 'rgba(77, 255, 232, 0.03)'}}>
-      <Container>
         <QAHeader/>
+        <Container>
         <Card.Group itemsPerRow={4}>
             {listGrids}
         </Card.Group>
