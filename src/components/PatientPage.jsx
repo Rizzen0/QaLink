@@ -2,6 +2,8 @@ import React from 'react';
 import QuestionRate from './QuestionRate.jsx';
 import { QuestionCard } from './QuestionCard.jsx';
 import Axios from 'axios';
+import { adviceMessage } from './adviceMessage.jsx'
+import QAHeader from './QAHeader.jsx'
 import '../styles/PatientPage.scss'
 
 import '../styles/Rating.scss'
@@ -16,7 +18,9 @@ export default class PatientPage extends React.Component {
       data: {},
       index: 0,
       index2: 0,
-      animation: ''
+      animation: '',
+      headmessage: "ATTENTION alimentation",
+      mainmessage: "PAS de riz, de yaourt"
     };
 
     this.sleep = function sleep(milliseconds) {
@@ -80,10 +84,13 @@ export default class PatientPage extends React.Component {
   render() {
     return (
             <div>
+              <QAHeader/>
               <h1>PatientPage</h1>
               <QuestionCard me={this} handleSwipe={this.handleSwipe} question={this.state.question} animation={this.state.animation}/>
               <br/>
               <QuestionRate/>
+              <br/>
+              <adviceMessage head={this.state.headmessage} message={this.state.mainmessage}/>
             </div>
             )
   }
