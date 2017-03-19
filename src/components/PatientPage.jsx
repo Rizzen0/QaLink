@@ -35,7 +35,7 @@ export default class PatientPage extends React.Component {
         this.setState({animation: 'animated bounceOutLeft'});
         setTimeout(() => {
           this.setState({animation: 'animated bounceInRight'});
-        }, 1000);
+        }, 500);
       }
       else if (e.direction == Hammer.DIRECTION_RIGHT) {
         document.getElementsByClassName('header')[0].innerHTML = 'what';
@@ -43,7 +43,7 @@ export default class PatientPage extends React.Component {
         this.setState({animation: 'animated bounceOutRight'});
         setTimeout(() => {
           this.setState({animation: 'animated bounceInLeft'});
-        }, 1000);
+        }, 500);
       }
       if (this.state.index == 0 && this.state.resp)
         this.setState({index: 1});
