@@ -15,35 +15,51 @@ export default class PatientPage extends React.Component {
       question: "",
       data: {},
       index: 0,
-      index2: 0
+      index2: 0,
+      animation: ''
     };
 
-    this.animation = '';
+    this.sleep = function sleep(milliseconds) {
+      var start = new Date().getTime();
+      for (var i = 0; i < 1e7; i++) {
+        if ((new Date().getTime() - start) > milliseconds){
+          break;
+        }
+      }
+    }
 
     this.handleSwipe = function (e) {
       if (e.direction == Hammer.DIRECTION_LEFT) {
+        document.getElementsByClassName('header')[0].innerHTML = ''
         this.setState({resp: false});
-        this.animation = 'animated bounceOutLeft';
+        this.setState({animation: 'animated bounceOutLeft'});
+        setTimeout(() => {
+          this.setState({animation: 'animated bounceInRight'});
+        }, 1000);
       }
       else if (e.direction == Hammer.DIRECTION_RIGHT) {
+        document.getElementsByClassName('header')[0].innerHTML = 'what';
         this.setState({resp: true});
-        this.animation = 'animated bounceOutRight';
+        this.setState({animation: 'animated bounceOutRight'});
+        setTimeout(() => {
+          this.setState({animation: 'animated bounceInLeft'});
+        }, 1000);
       }
       if (this.state.index == 0 && this.state.resp)
         this.setState({index: 1});
       else if (this.state.index == 0 && !this.state.resp)
         this.setState({index: 6});
+      console.log(this.state.index);
       if (!this.state.started && this.state.index != 0 && this.state.index != 6) {
         this.setState({question: this.state.data[this.state.index].start, started: true});
       }
       else if ((this.state.index2 > 0 || this.state.resp) && this.state.started && this.state.index != 0 && this.state.index != 6) {
-        console.log(this.state.data);
         this.setState({question: this.state.data[this.state.index].questions[this.state.index2], index2: this.state.index2 + 1});
         if (this.state.index2 == this.state.data[this.state.index].questions.length) {
           this.setState({index2: 0, index: this.state.index + 1, started: false});
         }
       }
-      else if (this.state.index2 == 0 && !this.state.resp) {
+      else if (this.state.index != 6 && this.state.index2 == 0 && !this.state.resp) {
         this.setState({index: this.state.index + 1});
         this.setState({question: this.state.data[this.state.index].start});
       }
@@ -65,7 +81,7 @@ export default class PatientPage extends React.Component {
     return (
             <div>
               <h1>PatientPage</h1>
-              <QuestionCard me={this} handleSwipe={this.handleSwipe} question={this.state.question}/>
+              <QuestionCard me={this} handleSwipe={this.handleSwipe} question={this.state.question} animation={this.state.animation}/>
               <br/>
               <QuestionRate/>
             </div>
