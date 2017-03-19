@@ -15,12 +15,18 @@ export default class PatientPage extends React.Component {
       question: "",
       data: {},
     };
+
+    this.animation = '';
+
     this.handleSwipe = function (e) {
       if (e.direction == Hammer.DIRECTION_LEFT) {
         this.setState({resp: false});
+        this.animation = 'animated bounceOutLeft';
       }
       else if (e.direction == Hammer.DIRECTION_RIGHT) {
         this.setState({resp: true});
+        this.animation = 'animated bounceOutRight';
+
       }
       if (this.state.current == 0) {
         this.setState({current: this.state.current++});
